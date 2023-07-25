@@ -1,4 +1,4 @@
-baseURL: https://younger027.github.io/ # 绑定的域名
+baseURL: https://www.youngergo.cn/ # 绑定的域名
 languageCode: en-us # en-us
 title: Younger's Blog
 theme: PaperMod # 主题名字，和themes文件夹下的一致
@@ -14,7 +14,7 @@ buildFuture: false
 buildExpired: false
 
 #googleAnalytics: UA-123-45 # 谷歌统计
-# Copyright: Sulv
+# Copyright: Younger
 
 paginate: 15    # 每页显示的文章数
 
@@ -129,7 +129,7 @@ params:
     - name: WeChat
       url: "img/wechat.png"
     - name: email
-      url: "mailto:1538697392@qq.com"
+      url: "mailto:lauyoung0207@gmail.com"
     - name: RSS
       url: "index.xml"
 
