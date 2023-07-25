@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>👨🏻‍💻 技术 on Younger&#39;s Blog</title>
+    <link>https://younger027.github.io/en/posts/tech/</link>
+    <description>Recent content in 👨🏻‍💻 技术 on Younger&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 13 Mar 2023 16:40:32 +0800</lastBuildDate><atom:link href="https://younger027.github.io/en/posts/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go Ants</title>
+      <link>https://younger027.github.io/en/posts/tech/go-ants/</link>
+      <pubDate>Mon, 13 Mar 2023 16:40:32 +0800</pubDate>
+      
+      <guid>https://younger027.github.io/en/posts/tech/go-ants/</guid>
+      <description>简介 众所周知，golang的goroutine是go并发编程的基础知识，我们只需要使用简单go func()就可以开启一个go协程，然后调度器</description>
+    </item>
+    
+    <item>
+      <title>Go Atomic</title>
+      <link>https://younger027.github.io/en/posts/tech/go-atomic/</link>
+      <pubDate>Mon, 13 Mar 2023 16:40:32 +0800</pubDate>
+      
+      <guid>https://younger027.github.io/en/posts/tech/go-atomic/</guid>
+      <description>源码解析 源码版本：1.18 atomic包主要支持一些原子操作，首先我们来看看源码doc文件(atomic的源码路径：/src/runtime</description>
+    </item>
+    
+    <item>
+      <title>Go Chan</title>
+      <link>https://younger027.github.io/en/posts/tech/go-chan/</link>
+      <pubDate>Mon, 20 Feb 2023 15:05:49 +0800</pubDate>
+      
+      <guid>https://younger027.github.io/en/posts/tech/go-chan/</guid>
+      <description>Do not communicate by sharing memory;instead, share memory by communicate.不要通过共享内存来通信，相反，应该通过通信来共享内存。这是Go语言并发的哲学座右铭。每个go开发在</description>
+    </item>
+    
+    <item>
+      <title>Go sync.mutex源码解析</title>
+      <link>https://younger027.github.io/en/posts/tech/go-sync.mutex/</link>
+      <pubDate>Thu, 02 Feb 2023 17:13:40 +0800</pubDate>
+      
+      <guid>https://younger027.github.io/en/posts/tech/go-sync.mutex/</guid>
+      <description>开端 今天学习下go里面的sync.mutex的实现以及相关扩展知识。 锁的介绍 首先，计算机中的锁是为了控制并发情况下，对同一资源的并发访问。锁</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://younger027.github.io/en/posts/tech/go-interview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://younger027.github.io/en/posts/tech/go-interview/</guid>
+      <description>1.go-channel阻塞的场景 无缓冲的channel，同一个协程内读写，会导致all goroutine are asleep.dead lock 无缓冲的channel，通道的同步写早于读c</description>
+    </item>
+    
+  </channel>
+</rss>

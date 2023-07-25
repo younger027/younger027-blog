@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>日常 on Younger&#39;s Blog</title>
+    <link>https://younger027.github.io/en/tags/%E6%97%A5%E5%B8%B8/</link>
+    <description>Recent content in 日常 on Younger&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 31 Jan 2023 18:56:21 +0800</lastBuildDate><atom:link href="https://younger027.github.io/en/tags/%E6%97%A5%E5%B8%B8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Me</title>
+      <link>https://younger027.github.io/en/posts/life/me/</link>
+      <pubDate>Tue, 31 Jan 2023 18:56:21 +0800</pubDate>
+      
+      <guid>https://younger027.github.io/en/posts/life/me/</guid>
+      <description>hi,我是younger，go后端开发。 为什么建立自己Blog 人这一生呢，生不带来，去不带走的。总得留点东西在这个世界上，证明你来过。</description>
+    </item>
+    
+  </channel>
+</rss>
