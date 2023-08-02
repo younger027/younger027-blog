@@ -1,5 +1,5 @@
 ---
-title: "Go Ants" #标题
+title: "Go Ants源码解析" #标题
 date: 2023-03-13T16:40:32+08:00 #创建时间
 lastmod: 2023-03-13T16:40:32+08:00 #更新时间
 author: ["Younger"] #作者
@@ -33,7 +33,7 @@ relative: false
 今天给大家分享一个github上有1w star的协程池库[ants](https://github.com/panjf2000/ants)。"ants是一个高性能的 goroutine 池，实现了对大规模 goroutine 的调度管理、goroutine 复用，允许使用者在开发并发程序的时候限制 goroutine 数量，复用资源，达到更高效执行任务的效果。从benchmark的结果来看，使用ants的吞吐性能相较于原生 goroutine 可以保持在 2-6 倍的性能压制，而内存消耗则可以达到 10-20 倍的节省优势"(来自仓库描述)，具体的细节可以看git仓库。
 
 ### 设计理念
-ants的设计理念是使用N个work goroutine 完成M个task的执行。控制goroutine的数量。就像仓库中的Activity Diagrams描述的那样。但是这样的设计也会有一些弊端，我们后面再聊。![ants设计理念](https://raw.githubusercontent.com/panjf2000/illustrations/master/go/ants-pool-2.png)
+ants的设计理念是使用N个work goroutine 完成M个task的执行。控制goroutine的数量。就像仓库中的Activity Diagrams描述的那样。但是这样的设计也会有一些弊端，我们后面再聊(图片来自原github仓库)。![ants设计理念](https://raw.githubusercontent.com/panjf2000/illustrations/master/go/ants-pool-2.png)
 
 ### 目录结构
 ants的代码并不多，除了test外总共也只有十多个文件，而且代码行数也不多，下面是比较重要的几个文件：
@@ -420,9 +420,10 @@ func NewPool(size int, options ...Option) (*Pool, error) {
 		p.workers = newWorkerQueue(queueTypeStack, 0)
 	}
 
-    //初始化自旋锁，清理程序和更新used time的定时任务
+    //自己实现了个自旋锁，将这个锁作为cond条件变量的关联到这个锁
 	p.cond = sync.NewCond(p.lock)
 
+    //清理程序和更新used time的定时任务
 	p.goPurge()
 	p.goTicktock()
 
@@ -444,5 +445,6 @@ workerChanCap = func() int {
 		return 1
 	}()
 ```
+初始化pool的函数中，我们可以配置是否使用purge功能清理woker，是否要自定义logger，是否要预分配workqueue等。比较重要的点就是使用对象池加速worker的分配，共用一个协程池对象p。根据是否预先分配，实现两种work queue，这些都是提升性能的关键点。还有就是自己实现了个自旋锁syncx.NewSpinLock()，加锁时会自旋尝试多次获取。
 
 ### 扩展阅读
