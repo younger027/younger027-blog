@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>redis on Younger&#39;s Blog</title>
+    <link>https://www.youngergo.cn/en/tags/redis/</link>
+    <description>Recent content in redis on Younger&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 02 Aug 2023 19:07:39 +0800</lastBuildDate><atom:link href="https://www.youngergo.cn/en/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Redis Interview</title>
+      <link>https://www.youngergo.cn/en/posts/tech/redis-interview/</link>
+      <pubDate>Wed, 02 Aug 2023 19:07:39 +0800</pubDate>
+      
+      <guid>https://www.youngergo.cn/en/posts/tech/redis-interview/</guid>
+      <description>1. 持久化怎么实现的 aof：append only file。持续写文件到buffer ring中，然后根据参数完成fsync操作。aof文件会有重写操作</description>
+    </item>
+    
+  </channel>
+</rss>
